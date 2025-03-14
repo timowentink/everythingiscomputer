@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything is Computer</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        
+        body {
+            background: purple;
+            color: white;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .glitch {
+            font-size: 4rem;
+            position: relative;
+            display: inline-block;
+            animation: glitch 0.8s infinite alternate, shake 0.1s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: -5px -5px 0 red, 5px 5px 0 blue; }
+            25% { text-shadow: 5px -5px 0 green, -5px 5px 0 yellow; }
+            50% { text-shadow: -5px 5px 0 cyan, 5px -5px 0 magenta; }
+            75% { text-shadow: 5px 5px 0 orange, -5px -5px 0 purple; }
+            100% { text-shadow: -5px -5px 0 red, 5px 5px 0 blue; }
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, 2px); }
+            50% { transform: translate(2px, -2px); }
+            75% { transform: translate(-2px, 2px); }
+            100% { transform: translate(2px, -2px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="glitch">EVERYTHING IS COMPUTER</div>
+</body>
+</html>
